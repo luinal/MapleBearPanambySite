@@ -1,0 +1,23 @@
+*.iml
+.directory
+
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+
+# Environment variables
+*.env
+
+# IDEs and Editors
+.vscode/
+*.swp
+.idea/
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
