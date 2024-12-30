@@ -1,13 +1,150 @@
-/*Limpar formatações padrões*/
-{
-	margin: 0;
-	padding: 0;
+:root {
+	--maple-red: #D83A3A;
+	--maple-dark-red: #B22234;
+	--maple-white: #FFFFFF;
+	--maple-off-white: #F9F5F5;
+	--maple-gray: #E8E8E8;
+	--maple-text: #2C3E50;
 }
 
 body {
-	font-size: 1em;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	background: #e6e6e6;
+	background-color: var(--maple-off-white);
+	color: var(--maple-text);
+}
+
+/* Navbar Styling */
+.navbar {
+	background-color: var(--maple-white) !important;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar .nav-link {
+	color: var(--maple-text) !important;
+	font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+	color: var(--maple-red) !important;
+}
+
+/* Hero Section */
+.hero-section {
+	position: relative;
+	background-color: var(--maple-gray);
+}
+
+.carousel-caption {
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 2rem;
+	border-radius: 10px;
+}
+
+.carousel-caption h1 {
+	color: var(--maple-white);
+	font-weight: bold;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Buttons */
+.btn-primary {
+	background-color: var(--maple-red) !important;
+	border-color: var(--maple-red) !important;
+	transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+	background-color: var(--maple-dark-red) !important;
+	border-color: var(--maple-dark-red) !important;
+	transform: translateY(-2px);
+}
+
+/* Cards */
+.card {
+	border: none;
+	background-color: var(--maple-white);
+	box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+	transition: transform 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.card-title {
+	color: var(--maple-dark-red);
+}
+
+/* Section Headers */
+section h2 {
+	color: var(--maple-text);
+	position: relative;
+	padding-bottom: 10px;
+}
+
+section h2:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 60px;
+	height: 3px;
+	background-color: var(--maple-red);
+	opacity: 0.8;
+}
+
+.text-center h2:after {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* Footer */
+footer {
+	background-color: var(--maple-dark-red) !important;
+	color: var(--maple-off-white);
+}
+
+/* Maple Leaf Accent */
+.maple-leaf-accent {
+	position: relative;
+}
+
+.maple-leaf-accent::before {
+	content: '🍁';
+	position: absolute;
+	font-size: 1.5em;
+	opacity: 0.15;
+}
+
+/* Contact Form */
+.form-control {
+	background-color: var(--maple-white);
+	border: 1px solid var(--maple-gray);
+}
+
+.form-control:focus {
+	border-color: var(--maple-red);
+	box-shadow: 0 0 0 0.2rem rgba(216, 58, 58, 0.15);
+}
+
+/* Seções alternadas */
+section:nth-child(even) {
+	background-color: var(--maple-gray);
+}
+
+section:nth-child(odd) {
+	background-color: var(--maple-white);
+}
+
+/* Efeito hover suave nos links */
+a {
+	transition: all 0.3s ease;
+}
+
+/* Maple Leaf com opacidade reduzida */
+.maple-leaf-accent::before {
+	opacity: 0.15;
 }
 
 
