@@ -1,32 +1,40 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Maple Bear Panamby</title>
-  </head>
-  <body>
-    <div id="area-cabecalho">
-		
-      {% if session %}
-      <h1>Welcome {{session.userinfo.name}}!</h1>
-      <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
-      <div><pre>{{pretty}}</pre></div>
-      {% else %}
-      <h1 id="profileDropDown">Maple Bear Panamby</h1>
+    <title>Maple Bear Panamby</title></div>
+    <div id="area-menu">
+
+      <div id="area-cabecalho">
+        <div id="conteudo"><img width="300px" src="static/images/logo-Maple-Bear-1.jpg"></div>
+        <div id="conteudo">
+          {% if session %}
+            <h1>Welcome {{session.userinfo.name}}!</h1>
+            <p><a href="/logout" id="qsLogoutBtn">Logout</a></p>
+            <div><pre>{{pretty}}</pre></div>
+          {% else %}
+            <h1 id="profileDropDown">Maple Bear Panamby</h1>
+          {% endif %}
+        </div>
+        <div></div>
+        <div></div>
+        
+        
   
-    </div>
-  
-      <div id="area-menu">
         <a href="index.html">Início</a>
         <a href="jogos.html">Escola</a>
         <a href="celulares.html">Metodologia Canadense</a>
         <a href="informatica.html">Ensino</a>
         <a href="eletronicos.html">Blog</a>
         <a href="eletronicos.html">Fale Conosco</a>
-        <a href="/login" id="qsLoginBtn">Login</a>
-        
-      </div>
+        <a href="/login" id="qsLoginBtn">Login</a> 
 
+        <a href="eletronicos.html">Agende uma Visita</a>
+        <a href="eletronicos.html">Área Restrita</a>
+      </div>
+      
+    </div>
+  </head>
+  <body>
     
-    {% endif %}
   </body>
 </html>
