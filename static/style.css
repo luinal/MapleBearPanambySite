@@ -148,3 +148,24 @@ a {
 }
 
 
+.conteudo{
+    background: blue;
+    border: 1px solid gray;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 10px;
+}
+
+.conteudo0{
+    background: red;
+    border: 1px solid gray;
+    width: 200px;
+    height: 250px;
+    float: right;
+    margin: 10px;
+}
+
+.clear {
+    clear: both;
+}
