@@ -45,6 +45,26 @@ def home():
 def about() -> str:
     return render_template("about.html")
 
+@app.route("/nossa-escola")
+def nossa_escola():
+    return render_template("nossa-escola.html")
+
+@app.route("/metodologia")
+def metodologia():
+    return render_template("metodologia.html")
+
+@app.route("/niveis-ensino")
+def niveis_ensino():
+    return render_template("niveis-ensino.html")
+
+@app.route("/blog")
+def blog():
+    return render_template("blog.html")
+
+@app.route("/contato")
+def contato():
+    return render_template("contato.html")
+
 @app.route("/callback", methods=["GET", "POST"])
 def callback():
     token = oauth.auth0.authorize_access_token()

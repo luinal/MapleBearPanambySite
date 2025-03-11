@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="metodologia-container container py-5">
+    <section class="hero-section text-center mb-5">
+        <h1 class="display-4">Metodologia Canadense</h1>
+        <p class="lead">Excelência em educação bilíngue com padrões internacionais</p>
+    </section>
+
+    <section class="features mb-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Bilinguismo Natural</h3>
+                        <p class="card-text">Imersão total em inglês desde os primeiros anos, proporcionando um aprendizado natural e efetivo do idioma.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Aprendizado Ativo</h3>
+                        <p class="card-text">Metodologia hands-on que incentiva a experimentação, descoberta e construção do conhecimento.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title">Desenvolvimento Integral</h3>
+                        <p class="card-text">Foco no desenvolvimento cognitivo, social, emocional e físico dos alunos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="methodology-details">
+        <h2 class="text-center mb-4">Pilares da Metodologia</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="methodology-item mb-4">
+                    <h3>Currículo Canadense</h3>
+                    <p>Baseado nas melhores práticas educacionais da província de Ontario, Canadá, reconhecida mundialmente pela qualidade de ensino.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="methodology-item mb-4">
+                    <h3>Avaliação Contínua</h3>
+                    <p>Processo avaliativo que acompanha o desenvolvimento individual de cada aluno, identificando potencialidades e áreas de melhoria.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+.metodologia-container {
+    max-width: 1200px;
+}
+
+.hero-section {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.methodology-item {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+h1, h2, h3 {
+    color: #2C3E50;
+}
+
+.lead {
+    color: #7F8C8D;
+}
+</style>
+{% endblock %} 

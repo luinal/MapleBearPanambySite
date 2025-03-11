@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="niveis-ensino-container container py-5">
+    <section class="hero-section text-center mb-5">
+        <h1 class="display-4">Níveis de Ensino</h1>
+        <p class="lead">Educação bilíngue em todas as etapas do desenvolvimento</p>
+    </section>
+
+    <div class="niveis-grid">
+        <div class="nivel-card">
+            <div class="nivel-content">
+                <h2>Toddler</h2>
+                <p class="idade">18 meses a 2 anos</p>
+                <ul class="features-list">
+                    <li>Primeiro contato com o inglês</li>
+                    <li>Desenvolvimento sensorial</li>
+                    <li>Socialização inicial</li>
+                    <li>Atividades lúdicas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nivel-card">
+            <div class="nivel-content">
+                <h2>Nursery</h2>
+                <p class="idade">2 a 3 anos</p>
+                <ul class="features-list">
+                    <li>Imersão em inglês</li>
+                    <li>Desenvolvimento motor</li>
+                    <li>Expressão artística</li>
+                    <li>Brincadeiras dirigidas</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nivel-card">
+            <div class="nivel-content">
+                <h2>Junior Kindergarten</h2>
+                <p class="idade">4 anos</p>
+                <ul class="features-list">
+                    <li>Alfabetização inicial</li>
+                    <li>Matemática básica</li>
+                    <li>Projetos temáticos</li>
+                    <li>Desenvolvimento social</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nivel-card">
+            <div class="nivel-content">
+                <h2>Senior Kindergarten</h2>
+                <p class="idade">5 anos</p>
+                <ul class="features-list">
+                    <li>Leitura e escrita</li>
+                    <li>Raciocínio lógico</li>
+                    <li>Ciências naturais</li>
+                    <li>Expressão criativa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.niveis-ensino-container {
+    max-width: 1200px;
+}
+
+.hero-section {
+    padding: 3rem 0;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+
+.niveis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.nivel-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.nivel-card:hover {
+    transform: translateY(-5px);
+}
+
+.nivel-content {
+    padding: 2rem;
+}
+
+.idade {
+    color: #E74C3C;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.features-list li:before {
+    content: "•";
+    color: #E74C3C;
+    position: absolute;
+    left: 0;
+}
+
+h1, h2 {
+    color: #2C3E50;
+}
+
+.lead {
+    color: #7F8C8D;
+}
+</style>
+{% endblock %} 
