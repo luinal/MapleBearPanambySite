@@ -1,267 +1,204 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="nossa-escola-container">
     <!-- Hero Section -->
-    <section class="hero-section">
-        <h1 class="main-title">Nossa Escola</h1>
-        <p class="subtitle">Educação Canadense, Futuro Global</p>
+    <section class="hero-section py-5">
+        <div class="container text-center">
+            <h1 class="display-4">Nossa Escola</h1>
+            <p class="lead">Formando cidadãos globais com excelência acadêmica e valores sólidos</p>
+        </div>
     </section>
 
-    <!-- Alunos Section -->
-    <section class="alunos-section">
-        <h2>Alunos Maple Bear</h2>
-        <div class="qualities-grid">
-            <div class="quality-card">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Curiosos</h3>
-                <p>Sempre em busca de novos conhecimentos e descobertas</p>
-            </div>
-            <div class="quality-card">
-                <i class="fas fa-star"></i>
-                <h3>Confiantes</h3>
-                <p>Preparados para enfrentar desafios com determinação</p>
-            </div>
-            <div class="quality-card">
-                <i class="fas fa-user-graduate"></i>
-                <h3>Independentes</h3>
-                <p>Capacidade de pensar e agir por conta própria</p>
-            </div>
-            <div class="quality-card">
-                <i class="fas fa-globe-americas"></i>
-                <h3>Globais</h3>
-                <p>Cidadãos do mundo com visão internacional</p>
-            </div>
-            <div class="quality-card">
-                <i class="fas fa-brain"></i>
-                <h3>Analíticos</h3>
-                <p>Desenvolvem pensamento crítico e resolução de problemas</p>
-            </div>
-            <div class="quality-card">
-                <i class="fas fa-random"></i>
-                <h3>Flexíveis</h3>
-                <p>Adaptáveis a diferentes situações e culturas</p>
+    <!-- Missão, Visão e Valores -->
+    <section class="mission-values py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="value-card h-100">
+                        <div class="card-body">
+                            <h2>Missão</h2>
+                            <p>Proporcionar uma educação bilíngue de excelência, formando cidadãos globais preparados para os desafios do futuro, com base em valores éticos e humanos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card h-100">
+                        <div class="card-body">
+                            <h2>Visão</h2>
+                            <p>Ser referência em educação bilíngue, reconhecida pela excelência acadêmica e formação integral dos alunos, contribuindo para um mundo melhor e mais conectado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="value-card h-100">
+                        <div class="card-body">
+                            <h2>Valores</h2>
+                            <ul class="values-list">
+                                <li>Excelência acadêmica</li>
+                                <li>Respeito à diversidade</li>
+                                <li>Inovação pedagógica</li>
+                                <li>Responsabilidade social</li>
+                                <li>Integridade e ética</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Diretrizes Section -->
-    <section class="diretrizes-section">
-        <h2>Nossas Diretrizes</h2>
-        <div class="diretrizes-grid">
-            <div class="diretriz-card">
-                <h3>Missão</h3>
-                <p>Proporcionar uma educação transformadora que prepare os alunos para serem cidadãos globais, através da metodologia canadense de ensino e do bilinguismo.</p>
-            </div>
-            <div class="diretriz-card">
-                <h3>Visão</h3>
-                <p>Ser referência em educação bilíngue, formando líderes preparados para os desafios do século XXI.</p>
-            </div>
-            <div class="diretriz-card">
-                <h3>Valores</h3>
-                <ul>
-                    <li>Excelência acadêmica</li>
-                    <li>Inovação pedagógica</li>
-                    <li>Respeito à diversidade</li>
-                    <li>Desenvolvimento integral</li>
-                    <li>Responsabilidade social</li>
-                </ul>
+    <!-- Qualidades do Aluno -->
+    <section class="student-qualities py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Qualidades do Aluno Maple Bear</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Pensamento Crítico</h3>
+                        <p>Capacidade de análise, resolução de problemas e tomada de decisões conscientes.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3>Cidadania Global</h3>
+                        <p>Consciência multicultural e compromisso com a sustentabilidade global.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Colaboração</h3>
+                        <p>Habilidade de trabalhar em equipe e contribuir com diferentes perspectivas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="quality-card">
+                        <div class="quality-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Criatividade</h3>
+                        <p>Capacidade de inovar e encontrar soluções originais para desafios.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Global Presence Section -->
-    <section class="global-presence-section">
-        <h2>Presença Global</h2>
-        <div id="world-map"></div>
-        <div class="statistics-container">
-            <div class="stat-card">
-                <h3 class="counter">400+</h3>
-                <p>Escolas no Brasil</p>
-            </div>
-            <div class="stat-card">
-                <h3 class="counter">550+</h3>
-                <p>Escolas no Mundo</p>
-            </div>
-            <div class="stat-card">
-                <h3 class="counter">30+</h3>
-                <p>Países</p>
+    <!-- Diferenciais -->
+    <section class="differentials py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossos Diferenciais</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="differential-card">
+                        <h3><i class="fas fa-chalkboard-teacher"></i> Professores Qualificados</h3>
+                        <p>Equipe docente com formação internacional e constante atualização pedagógica.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="differential-card">
+                        <h3><i class="fas fa-building"></i> Infraestrutura Moderna</h3>
+                        <p>Ambientes planejados para aprendizagem, com recursos tecnológicos e espaços especializados.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-</div>
 
-<!-- Styles -->
-<style>
-.nossa-escola-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
+    <style>
+    .hero-section {
+        background-color: #f8f9fa;
+        margin-bottom: 0;
+    }
 
-.hero-section {
-    text-align: center;
-    padding: 4rem 0;
-    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('/static/images/school-bg.jpg');
-    background-size: cover;
-    border-radius: 15px;
-    margin-bottom: 3rem;
-}
+    .value-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
 
-.main-title {
-    font-size: 3rem;
-    color: #2C3E50;
-    margin-bottom: 1rem;
-}
+    .value-card:hover {
+        transform: translateY(-5px);
+    }
 
-.subtitle {
-    font-size: 1.5rem;
-    color: #7F8C8D;
-}
+    .values-list {
+        list-style: none;
+        padding: 0;
+    }
 
-.qualities-grid, .diretrizes-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
-}
+    .values-list li {
+        margin-bottom: 0.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+    }
 
-.quality-card, .diretriz-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
+    .values-list li:before {
+        content: "•";
+        color: #E74C3C;
+        position: absolute;
+        left: 0;
+    }
 
-.quality-card:hover {
-    transform: translateY(-5px);
-}
+    .quality-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        text-align: center;
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
 
-.quality-card i {
-    font-size: 2rem;
-    color: #E74C3C;
-    margin-bottom: 1rem;
-}
+    .quality-card:hover {
+        transform: translateY(-5px);
+    }
 
-.statistics-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 2rem;
-}
+    .quality-icon {
+        font-size: 2.5rem;
+        color: #E74C3C;
+        margin-bottom: 1rem;
+    }
 
-.stat-card {
-    text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+    .differential-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
 
-.counter {
-    font-size: 2.5rem;
-    color: #E74C3C;
-    font-weight: bold;
-}
+    .differential-card:hover {
+        transform: translateY(-5px);
+    }
 
-#world-map {
-    height: 400px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    margin: 2rem 0;
-}
+    .differential-card h3 i {
+        color: #E74C3C;
+        margin-right: 0.5rem;
+    }
 
-section {
-    margin-bottom: 4rem;
-}
+    h1, h2, h3 {
+        color: #2C3E50;
+    }
 
-h2 {
-    color: #2C3E50;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-}
+    .lead {
+        color: #7F8C8D;
+    }
 
-h3 {
-    color: #34495E;
-    margin-bottom: 1rem;
-}
+    .card-body {
+        padding: 2rem;
+    }
+    </style>
 
-.diretriz-card ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.diretriz-card ul li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.diretriz-card ul li:before {
-    content: "•";
-    color: #E74C3C;
-    position: absolute;
-    left: 0;
-}
-</style>
-
-<!-- Scripts -->
-<script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
-<script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize the world map
-    const map = new jsVectorMap({
-        selector: '#world-map',
-        map: 'world',
-        zoomOnScroll: true,
-        zoomButtons: true,
-        markersSelectable: true,
-        markers: [
-            { name: "Brasil", coords: [-14.2350, -51.9253] },
-            // Add more markers for other countries
-        ],
-        markerStyle: {
-            initial: {
-                fill: '#E74C3C'
-            },
-            hover: {
-                fill: '#C0392B'
-            }
-        },
-        regionStyle: {
-            initial: {
-                fill: '#e4e4e4',
-                stroke: '#ffffff',
-                strokeWidth: 1,
-            },
-            hover: {
-                fill: '#2980B9'
-            }
-        }
-    });
-
-    // Animate counters
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-        const target = parseInt(counter.innerText);
-        let count = 0;
-        const speed = 2000 / target;
-        
-        function updateCount() {
-            if(count < target) {
-                count++;
-                counter.innerText = count + '+';
-                setTimeout(updateCount, speed);
-            }
-        }
-        
-        updateCount();
-    });
-});
-</script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
 {% endblock %} 
