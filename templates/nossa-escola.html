@@ -113,6 +113,28 @@
         </div>
     </section>
 
+    <!-- Global Presence Section -->
+    <section class="global-presence-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Presença Global</h2>
+            <div id="world-map" class="mb-4"></div>
+            <div class="statistics-container">
+                <div class="stat-card">
+                    <h3 class="counter">400+</h3>
+                    <p>Escolas no Brasil</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter">550+</h3>
+                    <p>Escolas no Mundo</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter">30+</h3>
+                    <p>Países</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <style>
     .hero-section {
         background-color: #f8f9fa;
@@ -197,8 +219,132 @@
     .card-body {
         padding: 2rem;
     }
+
+    .global-presence-section {
+        background-color: #f8f9fa;
+    }
+
+    #world-map {
+        height: 400px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .jsvectormap-zoom-btn {
+        background-color: white !important;
+        border: 1px solid #E74C3C !important;
+        color: #E74C3C !important;
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 4px !important;
+        margin: 5px !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .jsvectormap-zoom-btn:hover {
+        background-color: #E74C3C !important;
+        color: white !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2) !important;
+    }
+
+    .jsvectormap-zoom-btn:active {
+        transform: translateY(0);
+    }
+
+    .jsvectormap-zoom-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none !important;
+    }
+
+    .jsvectormap-zoom-btn:before {
+        font-size: 16px !important;
+        line-height: 28px !important;
+    }
+
+    .jsvectormap-zoom-btn.jsvectormap-zoom-btn-in {
+        margin-bottom: 5px !important;
+    }
+
+    .statistics-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .stat-card {
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .counter {
+        font-size: 2.5rem;
+        color: #E74C3C;
+        font-weight: bold;
+    }
     </style>
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the world map
+        const map = new jsVectorMap({
+            selector: '#world-map',
+            map: 'world',
+            zoomOnScroll: true,
+            zoomButtons: false,
+            markersSelectable: true,
+            markers: [
+                { name: "Brasil", coords: [-14.2350, -51.9253] },
+                // Add more markers for other countries
+            ],
+            markerStyle: {
+                initial: {
+                    fill: '#E74C3C'
+                },
+                hover: {
+                    fill: '#C0392B'
+                }
+            },
+            regionStyle: {
+                initial: {
+                    fill: '#e4e4e4',
+                    stroke: '#ffffff',
+                    strokeWidth: 1,
+                },
+                hover: {
+                    fill: '#2980B9'
+                }
+            }
+        });
+
+        // Animate counters
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = parseInt(counter.innerText);
+            let count = 0;
+            const speed = 2000 / target;
+            
+            function updateCount() {
+                if(count < target) {
+                    count++;
+                    counter.innerText = count + '+';
+                    setTimeout(updateCount, speed);
+                }
+            }
+            
+            updateCount();
+        });
+    });
+    </script>
 {% endblock %} 
