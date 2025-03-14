@@ -2,10 +2,12 @@
 
 {% block content %}
     <!-- Hero Section -->
-    <section class="hero-section py-5">
-        <div class="container text-center">
-            <h1 class="display-4">Nossa Escola</h1>
-            <p class="lead">Formando cidadãos globais com excelência acadêmica e valores sólidos</p>
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="container text-center">
+                <h1 class="display-4">Nossa Escola</h1>
+                <p class="lead">Formando cidadãos globais com excelência acadêmica e valores sólidos</p>
+            </div>
         </div>
     </section>
 
@@ -15,6 +17,7 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="value-card h-100">
+                        <img src="{{ url_for('static', filename='images/esc-missao.jpg') }}" class="card-img-top" alt="Missão">
                         <div class="card-body">
                             <h2>Missão</h2>
                             <p>Proporcionar uma educação bilíngue de excelência, formando cidadãos globais preparados para os desafios do futuro, com base em valores éticos e humanos.</p>
@@ -23,6 +26,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="value-card h-100">
+                        <img src="{{ url_for('static', filename='images/esc-visao.jpg') }}" class="card-img-top" alt="Visão">
                         <div class="card-body">
                             <h2>Visão</h2>
                             <p>Ser referência em educação bilíngue, reconhecida pela excelência acadêmica e formação integral dos alunos, contribuindo para um mundo melhor e mais conectado.</p>
@@ -31,6 +35,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="value-card h-100">
+                        <img src="{{ url_for('static', filename='images/esc-valores.jpg') }}" class="card-img-top" alt="Valores">
                         <div class="card-body">
                             <h2>Valores</h2>
                             <ul class="values-list">
@@ -137,8 +142,36 @@
 
     <style>
     .hero-section {
-        background-color: #f8f9fa;
+        position: relative;
+        height: 600px;
+        background-image: url("{{ url_for('static', filename='images/hero-school.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         margin-bottom: 0;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-section h1 {
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .lead {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
 
     .value-card {
@@ -146,10 +179,32 @@
         border-radius: 15px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: transform 0.3s ease;
+        overflow: hidden;
     }
 
     .value-card:hover {
         transform: translateY(-5px);
+    }
+
+    .value-card .card-img-top {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .value-card .card-body {
+        padding: 1.5rem;
+    }
+
+    .value-card h2 {
+        color: #2C3E50;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .value-card p {
+        color: #7F8C8D;
+        margin-bottom: 0;
     }
 
     .values-list {
@@ -214,10 +269,6 @@
 
     .lead {
         color: #7F8C8D;
-    }
-
-    .card-body {
-        padding: 2rem;
     }
 
     .global-presence-section {
@@ -289,6 +340,8 @@
         color: #E74C3C;
         font-weight: bold;
     }
+
+  
     </style>
 
     <!-- Scripts -->
