@@ -118,23 +118,31 @@
         </div>
     </section>
 
-    <!-- Global Presence Section -->
+    <!-- Map Section -->
     <section class="global-presence-section py-5">
         <div class="container">
             <h2 class="text-center mb-5">Presença Global</h2>
-            <div id="world-map" class="mb-4"></div>
-            <div class="statistics-container">
-                <div class="stat-card">
-                    <h3 class="counter">400+</h3>
-                    <p>Escolas no Brasil</p>
-                </div>
-                <div class="stat-card">
-                    <h3 class="counter">550+</h3>
-                    <p>Escolas no Mundo</p>
-                </div>
-                <div class="stat-card">
-                    <h3 class="counter">30+</h3>
-                    <p>Países</p>
+            <div id="world-map" style="height: 500px;"></div>
+            <div class="statistics-container mt-5">
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <h3>400+</h3>
+                            <p>Escolas no Brasil</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <h3>550+</h3>
+                            <p>Escolas no Mundo</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card">
+                            <h3>30+</h3>
+                            <p>Países</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -276,72 +284,18 @@
     }
 
     #world-map {
-        height: 400px;
-        background-color: white;
         border-radius: 15px;
+        overflow: hidden;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
-    .jsvectormap-zoom-btn {
-        background-color: white !important;
-        border: 1px solid #E74C3C !important;
-        color: #E74C3C !important;
-        width: 30px !important;
-        height: 30px !important;
-        border-radius: 4px !important;
-        margin: 5px !important;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
-        transition: all 0.3s ease !important;
+    .jvm-tooltip {
+        background-color: #2C3E50;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 14px;
     }
-
-    .jsvectormap-zoom-btn:hover {
-        background-color: #E74C3C !important;
-        color: white !important;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2) !important;
-    }
-
-    .jsvectormap-zoom-btn:active {
-        transform: translateY(0);
-    }
-
-    .jsvectormap-zoom-btn:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-        transform: none !important;
-    }
-
-    .jsvectormap-zoom-btn:before {
-        font-size: 16px !important;
-        line-height: 28px !important;
-    }
-
-    .jsvectormap-zoom-btn.jsvectormap-zoom-btn-in {
-        margin-bottom: 5px !important;
-    }
-
-    .statistics-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .stat-card {
-        text-align: center;
-        padding: 2rem;
-        background: white;
-        border-radius: 15px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .counter {
-        font-size: 2.5rem;
-        color: #E74C3C;
-        font-weight: bold;
-    }
-
-  
     </style>
 
     <!-- Scripts -->
@@ -349,55 +303,93 @@
     <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize the world map
-        const map = new jsVectorMap({
-            selector: '#world-map',
-            map: 'world',
-            zoomOnScroll: true,
-            zoomButtons: false,
-            markersSelectable: true,
-            markers: [
-                { name: "Brasil", coords: [-14.2350, -51.9253] },
-                // Add more markers for other countries
-            ],
-            markerStyle: {
-                initial: {
-                    fill: '#E74C3C'
-                },
-                hover: {
-                    fill: '#C0392B'
-                }
-            },
-            regionStyle: {
-                initial: {
-                    fill: '#e4e4e4',
-                    stroke: '#ffffff',
-                    strokeWidth: 1,
-                },
-                hover: {
-                    fill: '#2980B9'
-                }
-            }
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const mapElement = document.getElementById('world-map');
+            
+            // Define Maple Bear countries
+            const mapleBearCountries = {
+                BR: 'Brazil',
+                AR: 'Argentina',
+                PE: 'Peru',
+                PY: 'Paraguay',
+                GT: 'Guatemala',
+                MX: 'Mexico',
+                US: 'United States',
+                CA: 'Canada',
+                MA: 'Morocco',
+                KE: 'Kenya',
+                OM: 'Oman',
+                AE: 'United Arab Emirates',
+                TR: 'Turkey',
+                BG: 'Bulgaria',
+                RO: 'Romania',
+                RS: 'Serbia',
+                AL: 'Albania',
+                HR: 'Croatia',
+                IN: 'India',
+                LK: 'Sri Lanka',
+                BD: 'Bangladesh',
+                NP: 'Nepal',
+                CN: 'China',
+                KR: 'South Korea',
+                HK: 'Hong Kong',
+                PH: 'Philippines',
+                VN: 'Vietnam',
+                TH: 'Thailand',
+                MY: 'Malaysia',
+                SG: 'Singapore',
+                AU: 'Australia'
+            };
 
-        // Animate counters
-        const counters = document.querySelectorAll('.counter');
-        counters.forEach(counter => {
-            const target = parseInt(counter.innerText);
-            let count = 0;
-            const speed = 2000 / target;
-            
-            function updateCount() {
-                if(count < target) {
-                    count++;
-                    counter.innerText = count + '+';
-                    setTimeout(updateCount, speed);
+            // Create markers array
+            const markers = [
+                { name: "Headquarters", coords: [56.1304, -106.3468] }, // Canada coordinates
+            ];
+
+            // Initialize the map
+            const map = new jsVectorMap({
+                selector: '#world-map',
+                map: 'world',
+                zoomOnScroll: false,
+                selectedRegions: Object.keys(mapleBearCountries),
+                markers: markers,
+                markerStyle: {
+                    initial: {
+                        fill: '#E74C3C',
+                        stroke: '#fff'
+                    }
+                },
+                labels: {
+                    markers: {
+                        render: function(marker) {
+                            return marker.name;
+                        },
+                        offsets: function(index) {
+                            return [-10, 0];
+                        }
+                    }
+                },
+                regionStyle: {
+                    initial: {
+                        fill: '#e9ecef',
+                        stroke: '#fff',
+                        strokeWidth: 1,
+                    },
+                    hover: {
+                        fill: '#E74C3C',
+                        fillOpacity: 0.7,
+                        cursor: 'pointer'
+                    },
+                    selected: {
+                        fill: '#E74C3C'
+                    }
+                },
+                onRegionTipShow: function(event, element, code) {
+                    if (mapleBearCountries[code]) {
+                        element.html(mapleBearCountries[code]);
+                    }
                 }
-            }
-            
-            updateCount();
+            });
         });
-    });
     </script>
 {% endblock %} 

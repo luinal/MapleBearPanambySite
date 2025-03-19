@@ -2,21 +2,35 @@
 
 {% block content %}
     <!-- Hero Section -->
-    <section class="hero-section py-5">
-        <div class="container text-center">
-            <h1 class="display-4">Níveis de Ensino</h1>
-            <p class="lead">Educação bilíngue em todas as etapas do desenvolvimento</p>
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="container text-center">
+                <h1 class="display-4">Níveis de Ensino</h1>
+                <p class="lead">Educação bilíngue em todas as etapas do desenvolvimento</p>
+            </div>
         </div>
     </section>
 
-    <!-- Níveis Grid -->
-    <section class="niveis py-5">
+    <!-- Early Childhood Section -->
+    <section class="education-section py-5">
         <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Educação Infantil</h2>
+                <p class="lead">Desenvolvimento integral através de experiências significativas</p>
+            </div>
             <div class="row g-4">
+                <div class="col-12 mb-4">
+                    <div class="section-image-container">
+                        <img src="{{ url_for('static', filename='images/hero-childhood.jpg') }}" alt="Educação Infantil" class="section-image">
+                    </div>
+                </div>
                 <div class="col-md-6 col-lg-3">
                     <div class="nivel-card h-100">
                         <div class="nivel-content">
-                            <h2>Toddler</h2>
+                            <div class="nivel-icon">
+                                <i class="fas fa-baby"></i>
+                            </div>
+                            <h3>Toddler</h3>
                             <p class="idade">18 meses a 2 anos</p>
                             <ul class="features-list">
                                 <li>Primeiro contato com o inglês</li>
@@ -31,7 +45,10 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="nivel-card h-100">
                         <div class="nivel-content">
-                            <h2>Nursery</h2>
+                            <div class="nivel-icon">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <h3>Nursery</h3>
                             <p class="idade">2 a 3 anos</p>
                             <ul class="features-list">
                                 <li>Imersão em inglês</li>
@@ -46,7 +63,10 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="nivel-card h-100">
                         <div class="nivel-content">
-                            <h2>Junior Kindergarten</h2>
+                            <div class="nivel-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3>Junior Kindergarten</h3>
                             <p class="idade">4 anos</p>
                             <ul class="features-list">
                                 <li>Alfabetização inicial</li>
@@ -61,7 +81,10 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="nivel-card h-100">
                         <div class="nivel-content">
-                            <h2>Senior Kindergarten</h2>
+                            <div class="nivel-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Senior Kindergarten</h3>
                             <p class="idade">5 anos</p>
                             <ul class="features-list">
                                 <li>Leitura e escrita</li>
@@ -76,30 +99,175 @@
         </div>
     </section>
 
+    <!-- Elementary Section -->
+    <section class="education-section py-5 bg-light">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <h2>Ensino Fundamental</h2>
+                <p class="lead">Formação acadêmica sólida com foco em habilidades do século XXI</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 mb-4">
+                    <div class="section-image-container">
+                        <img src="{{ url_for('static', filename='images/hero-elementary.jpg') }}" alt="Ensino Fundamental" class="section-image">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="nivel-card h-100">
+                        <div class="nivel-content">
+                            <div class="nivel-icon">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <h3>Fundamental I</h3>
+                            <p class="idade">1º ao 5º ano</p>
+                            <ul class="features-list">
+                                <li>Alfabetização bilíngue</li>
+                                <li>Matemática e ciências</li>
+                                <li>Artes e música</li>
+                                <li>Desenvolvimento socioemocional</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="nivel-card h-100">
+                        <div class="nivel-content">
+                            <div class="nivel-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <h3>Fundamental II</h3>
+                            <p class="idade">6º ao 9º ano</p>
+                            <ul class="features-list">
+                                <li>Ciências avançadas</li>
+                                <li>História e geografia</li>
+                                <li>Línguas estrangeiras</li>
+                                <li>Projetos interdisciplinares</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="nivel-card h-100">
+                        <div class="nivel-content">
+                            <div class="nivel-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Programas Especiais</h3>
+                            <p class="idade">Extracurricular</p>
+                            <ul class="features-list">
+                                <li>Robótica e programação</li>
+                                <li>Esportes e artes</li>
+                                <li>Projetos sociais</li>
+                                <li>Preparação para o futuro</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <style>
     .hero-section {
-        background-color: #f8f9fa;
+        position: relative;
+        height: 578px;
+        background-image: url("{{ url_for('static', filename='images/hero-blog.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         margin-bottom: 0;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-section h1 {
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .lead {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-header h2 {
+        color: #2C3E50;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .section-header .lead {
+        color: #7F8C8D;
+        font-size: 1.25rem;
+    }
+
+    .section-image-container {
+        width: 100%;
+        height: 345px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .section-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
     }
 
     .nivel-card {
         background: white;
         border-radius: 15px;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
     }
 
     .nivel-card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
     }
 
     .nivel-content {
         padding: 2rem;
+        text-align: center;
+    }
+
+    .nivel-icon {
+        width: 80px;
+        height: 80px;
+        background: #E74C3C;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+    }
+
+    .nivel-icon i {
+        font-size: 2rem;
+        color: white;
     }
 
     .idade {
         color: #E74C3C;
-        font-weight: bold;
+        font-weight: 600;
+        font-size: 1.1rem;
         margin-bottom: 1rem;
     }
 
@@ -107,12 +275,14 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        text-align: left;
     }
 
     .features-list li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
         padding-left: 1.5rem;
         position: relative;
+        color: #2C3E50;
     }
 
     .features-list li:before {
@@ -122,17 +292,19 @@
         left: 0;
     }
 
-    h1, h2 {
+    h3 {
         color: #2C3E50;
-    }
-
-    .lead {
-        color: #7F8C8D;
-    }
-
-    h2 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    .bg-light {
+        background-color: #f8f9fa;
+    }
+
+    .education-section {
+        margin-bottom: 5rem;
     }
     </style>
 {% endblock %} 

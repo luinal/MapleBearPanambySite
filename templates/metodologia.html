@@ -2,63 +2,100 @@
 
 {% block content %}
     <!-- Hero Section -->
-    <section class="hero-section py-5">
-        <div class="container text-center">
-            <h1 class="display-4">Metodologia Canadense</h1>
-            <p class="lead">Excelência em educação bilíngue com padrões internacionais</p>
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="container text-center">
+                <h1 class="display-4" align="left">Metodologia</h1>
+                <p class="lead" align="left">A Maple Bear adota um dos melhores modelos pedagógicos do mundo!</p>
+            </div>
         </div>
     </section>
 
-    <!-- Características Principais -->
-    <section class="features py-5">
+    <!-- Cidadania Section -->
+    <section class="citizenship-section py-5">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="{{ url_for('static', filename='images/card1.jpg') }}" class="card-img-top" alt="Bilinguismo Natural">
-                        <div class="card-body">
-                            <h3 class="card-title">Bilinguismo Natural</h3>
-                            <p class="card-text">Imersão total em inglês desde os primeiros anos, proporcionando um aprendizado natural e efetivo do idioma.</p>
-                        </div>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-md-4 citizenship-image-container">
+                    <img src="{{ url_for('static', filename='images/thumbnail-metodologia01.png') }}" alt="Cidadania Canadense" class="img-fluid rounded shadow citizenship-image">
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="{{ url_for('static', filename='images/card2.jpg') }}" class="card-img-top" alt="Aprendizado Ativo">
-                        <div class="card-body">
-                            <h3 class="card-title">Aprendizado Ativo</h3>
-                            <p class="card-text">Metodologia hands-on que incentiva a experimentação, descoberta e construção do conhecimento.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="{{ url_for('static', filename='images/card3.jpg') }}" class="card-img-top" alt="Desenvolvimento Integral">
-                        <div class="card-body">
-                            <h3 class="card-title">Desenvolvimento Integral</h3>
-                            <p class="card-text">Foco no desenvolvimento cognitivo, social, emocional e físico dos alunos.</p>
-                        </div>
-                    </div>
+                <div class="col-md-8">
+                    <h2 class="mb-4" style="font-size: 38px;">Cidadania</h2>
+                    <p class="lead mb-4">Nossos alunos têm a oportunidade única de obter a cidadania canadense através do programa de educação Maple Bear.</p>
+                    <p class="citizenship-text">O programa Maple Bear oferece uma jornada educacional completa que pode levar à cidadania canadense. Nossos alunos desenvolvem proficiência em inglês e francês, além de adquirirem habilidades e conhecimentos alinhados com os padrões educacionais canadenses.</p>
+                    <p class="citizenship-text">Esta experiência educacional internacional abre portas para oportunidades acadêmicas e profissionais no Canadá, permitindo que nossos alunos se tornem cidadãos globais com acesso a um mundo de possibilidades.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pilares da Metodologia -->
-    <section class="methodology-details py-5 bg-light">
+    <!-- Diferenciais Section -->
+    <section class="differentials-section py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5">Pilares da Metodologia</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="methodology-item">
-                        <h3>Currículo Canadense</h3>
-                        <p>Baseado nas melhores práticas educacionais da província de Ontario, Canadá, reconhecida mundialmente pela qualidade de ensino.</p>
-                    </div>
+            <h2 class="text-left mb-5" style="font-size: 38px;">Diferenciais Maple Bear</h2>
+            <div class="row differentials-content">
+                <div class="col-md-4">
+                    <img src="{{ url_for('static', filename='images/card-metodologia01.png') }}" alt="Metodologia Maple Bear" class="rounded shadow mb-4 differential-image">
                 </div>
-                <div class="col-md-6">
-                    <div class="methodology-item">
-                        <h3>Avaliação Contínua</h3>
-                        <p>Processo avaliativo que acompanha o desenvolvimento individual de cada aluno, identificando potencialidades e áreas de melhoria.</p>
+                <div class="col-md-8">
+                    <div class="differential-dropdown">
+                        <div class="differential-header" onclick="toggleContent(this)">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-language me-3"></i>
+                                <h3 class="mb-0">Bilinguismo por Imersão</h3>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="differential-content">
+                            <p>Ambiente de aprendizado completamente em inglês, proporcionando uma imersão total na língua e cultura canadense. Nossos alunos desenvolvem proficiência natural no idioma através de experiências autênticas de aprendizado.</p>
+                        </div>
+                    </div>
+                    <div class="differential-dropdown">
+                        <div class="differential-header" onclick="toggleContent(this)">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-chalkboard-teacher me-3"></i>
+                                <h3 class="mb-0">Educadores Canadenses</h3>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="differential-content">
+                            <p>Nossa equipe docente é composta por professores canadenses altamente qualificados, que trazem a expertise e as melhores práticas educacionais do Canadá para a sala de aula.</p>
+                        </div>
+                    </div>
+                    <div class="differential-dropdown">
+                        <div class="differential-header" onclick="toggleContent(this)">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-graduation-cap me-3"></i>
+                                <h3 class="mb-0">Programa Acadêmico</h3>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="differential-content">
+                            <p>Currículo canadense adaptado ao contexto local, combinando o melhor da educação canadense com elementos da cultura brasileira. Foco em desenvolvimento de habilidades do século XXI e pensamento crítico.</p>
+                        </div>
+                    </div>
+                    <div class="differential-dropdown">
+                        <div class="differential-header" onclick="toggleContent(this)">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-certificate me-3"></i>
+                                <h3 class="mb-0">Quality Assurance</h3>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="differential-content">
+                            <p>Sistema rigoroso de qualidade que garante a excelência do ensino em todas as escolas Maple Bear. Avaliações regulares e monitoramento contínuo do desempenho acadêmico.</p>
+                        </div>
+                    </div>
+                    <div class="differential-dropdown">
+                        <div class="differential-header" onclick="toggleContent(this)">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-book me-3"></i>
+                                <h3 class="mb-0">Revista Maple Bear</h3>
+                            </div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="differential-content">
+                            <p>Publicação trimestral que destaca as conquistas e experiências de nossas escolas em todo o mundo, compartilhando as melhores práticas e inovações educacionais.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -67,39 +104,163 @@
 
     <style>
     .hero-section {
-        background-color: #f8f9fa;
+        position: relative;
+        height: 680px;
+        background-image: url("{{ url_for('static', filename='images/hero-metodologia1.jpg') }}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         margin-bottom: 0;
     }
 
-    .card {
-        transition: transform 0.3s ease;
-        border: none;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    .hero-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .card:hover {
-        transform: translateY(-5px);
-    }
-
-    .methodology-item {
-        background-color: white;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        height: 100%;
-    }
-
-    h1, h2, h3 {
-        color: #2C3E50;
-    }
-
-    .lead {
-        color: #7F8C8D;
-    }
-
-    .card-title {
-        color: #E74C3C;
+    .hero-section h1 {
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         margin-bottom: 1rem;
     }
+
+    .hero-section .lead {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .citizenship-section {
+        background-color: white;
+    }
+
+    .citizenship-section h2 {
+        color: #2C3E50;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+    }
+
+    .citizenship-section .lead {
+        color: #E74C3C;
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+
+    .citizenship-text {
+        color: #2C3E50;
+        line-height: 1.8;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .citizenship-image-container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .citizenship-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .differential-image {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .differentials-content {
+        min-height: 600px; /* Fixed minimum height to prevent footer flickering */
+    }
+
+    .differential-dropdown {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 1rem;
+        overflow: hidden;
+    }
+
+    .differential-header {
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .differential-header:hover {
+        background-color: #f8f9fa;
+    }
+
+    .differential-header i {
+        color: #E74C3C;
+        font-size: 1.25rem;
+        transition: transform 0.3s ease;
+    }
+
+    .differential-header h3 {
+        color: #2C3E50;
+        font-size: 1.25rem;
+        margin: 0;
+        font-weight: 600;
+    }
+
+    .differential-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        padding: 0 1.5rem;
+    }
+
+    .differential-content p {
+        color: #2C3E50;
+        margin: 0;
+        line-height: 1.6;
+        font-weight: 500;
+        padding-bottom: 1.5rem;
+    }
+
+    .differentials-section {
+        background-color: #f8f9fa;
+    }
     </style>
+
+    <script>
+    function toggleContent(element) {
+        const content = element.nextElementSibling;
+        const icon = element.querySelector('.fa-chevron-down');
+        
+        // Close all other dropdowns
+        document.querySelectorAll('.differential-content').forEach(item => {
+            if (item !== content) {
+                item.style.maxHeight = '0';
+                item.style.padding = '0 1.5rem';
+            }
+        });
+        
+        // Toggle current dropdown
+        if (content.style.maxHeight === '0px' || !content.style.maxHeight) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+            content.style.padding = '0 1.5rem 1.5rem 1.5rem';
+            icon.style.transform = 'rotate(180deg)';
+        } else {
+            content.style.maxHeight = '0';
+            content.style.padding = '0 1.5rem';
+            icon.style.transform = 'rotate(0deg)';
+        }
+    }
+    </script>
 {% endblock %} 

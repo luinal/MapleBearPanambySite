@@ -59,3 +59,16 @@ The [Responsible Disclosure Program](https://auth0.com/whitehat) details the pro
 ## License
 
 This project is licensed under the MIT license. See the [LICENSE](../LICENSE) file for more info.
+
+
+
+
+## How to update PythonAnywhere
+1) Open bash console
+2) Navigate to project directory
+
+cd ~/MapleBearPanambySite
+
+3) Pull the latest changes
+
+git pull origin main
